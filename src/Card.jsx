@@ -1,8 +1,6 @@
 // import classes from "./Card.module.css";
 
-import profilePic from "./assets/profile.jpg";
-
-function Card() {
+function Card({ name, text, profilePic }) {
   // const cardStyle = {
   //   backgroundcolor: "blue",
   // };
@@ -10,8 +8,8 @@ function Card() {
   return (
     <div className="card">
       <img className="card-img" src={profilePic} alt="profile picture" />
-      <h2 className="card-title">Arnar</h2>
-      <p className="card-text">Jag lär ut React och gillar o spela gura</p>
+      <h2 className="card-title">{name}</h2>
+      <p className="card-text">{text}</p>
     </div>
   );
 }
